@@ -95,8 +95,8 @@ input[type="text"] {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 3.2rem;
@@ -217,5 +217,102 @@ pokemon-info {
   & button {
     padding: 0.6rem 0;
     cursor: pointer;
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  .pokemon-card {
+    width: 30rem;
+}
+h1 {
+  font-size: 2.4rem;
+}
+input[type="text"] {
+  width: 30rem;
+}
+p, span {
+  font-size: 1.2rem;
+}
+.pokemon-name {
+  font-size: 2.2rem;
+}
+}
+.create {
+  font-size: smaller;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 10px 20px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.create:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #54b3d6;;
+}
+span.pokemonCount {
+  font-size: x-small;
+  font-weight: lighter;
+}
+/* Footer.css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00aaff;
+}
+
+.footer-bottom {
+  padding: 10px 0;
+  font-size: 12px;
+  background-color: #222;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 15px;
   }
 }

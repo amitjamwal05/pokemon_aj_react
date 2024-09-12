@@ -1,6 +1,3 @@
-{
-  /* // subscribe to thapa technical youtube channel: https://www.youtube.com/thapatechnical */
-}
 
 export const PokemonCards = ({ pokemonData }) => {
   return (
@@ -50,6 +47,7 @@ export const PokemonCards = ({ pokemonData }) => {
           <span> Abilities: </span>
         </div>
       </div>
+    <span className="create">𝒞𝓇𝑒𝒶𝓉𝑒𝒹 𝒷𝓎 𝒜𝓂𝒾𝓉 𝒥𝒶𝓂𝓌𝒶𝓁</span>  
     </li>
   );
 };

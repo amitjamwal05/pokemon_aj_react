@@ -8,8 +8,7 @@ export const Pokemon = () => {
   const [error, setError] = useState(null);
   const [search, setSearch] = useState("");
 
-  const API = "https://pokeapi.co/api/v2/pokemon?limit=124";
-  // subscribe to thapa technical youtube channel: https://www.youtube.com/thapatechnical
+  const API = "https://pokeapi.co/api/v2/pokemon?limit=324";
 
   const fetchPokemon = async () => {
     try {
@@ -25,7 +24,6 @@ export const Pokemon = () => {
       //   console.log(detailedPokemonData);
 
       const detailedResponses = await Promise.all(detailedPokemonData);
-      console.log(detailedResponses);
       setPokemon(detailedResponses);
       setLoading(false);
     } catch (error) {
@@ -61,13 +59,11 @@ export const Pokemon = () => {
     );
   }
 
-  // subscribe to thapa technical youtube channel: https://www.youtube.com/thapatechnical
-
   return (
     <>
       <section className="container">
         <header>
-          <h1> Lets Catch Pokémon</h1>
+          <h1> Lets Catch Pokémon <span className="pokemonCount">Total {searchData.length}</span></h1>
         </header>
         <div className="pokemon-search">
           <input
@@ -79,7 +75,6 @@ export const Pokemon = () => {
         </div>
         <div>
           <ul className="cards">
-            {/* {pokemon.map((curPokemon) => { */}
             {searchData.map((curPokemon) => {
               return (
                 <PokemonCards key={curPokemon.id} pokemonData={curPokemon} />

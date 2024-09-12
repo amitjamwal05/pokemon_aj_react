@@ -1,5 +1,11 @@
+import Footer from "./Footer";
 import { Pokemon } from "./Pokemon";
 
 export const App = () => {
-  return <Pokemon />;
+  return (
+    <>
+  <Pokemon />
+  <Footer/>
+  </>
+);
 };
